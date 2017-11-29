@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  * Hello world!
  *
  */
-public class App {
+public class ListApp {
 
     private static final int LIST_SIZE = 100_000;
 

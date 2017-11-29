@@ -12,7 +12,7 @@
 ## Jakie są podstawowe implementacje poszczególnych interfejsów?
 
 * implementacjami List są ArrayList, LinkedList
-* implementacjami Set są
+* implementacjami Set są HashSet, TreeSet, LinkedHashSet
 * implementacjami Queue są
 * implementacjami Deque są
 
@@ -24,7 +24,8 @@
 
 * ArrayList wykorzystuje wewnętrznie implementację tablicową
 * LinkedList wykorzystuje wewnętrznie implementację wskaźnikową
-* różnice pojawiają się podczas: dodawanie na początek listy, pobieranie i-tego elementu listy, usuwanie pierwszego elementu listy
+* różnice pojawiają się podczas operacji takich jak: dodawanie elementu na początek listy, pobieranie i-tego elementu listy, usuwanie pierwszego elementu listy
 
+## Do których kolekcji można wstawiać wartości null?
 
 ## Napisać aplikację wykorzystującą różne kolekcje i obrazującą różnice

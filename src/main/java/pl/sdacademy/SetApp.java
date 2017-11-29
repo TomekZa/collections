@@ -23,6 +23,29 @@ public class SetApp {
         showCarsFromSet(treeSet);
         System.out.println("Samochody z linked hash set:");
         showCarsFromSet(linkedHashSet);
+        System.out.println("Modele w jednej linii: ");
+        showCarsFromSetOneLine(hashSet);
+    }
+
+    //metoda wyświetla wszystkie samochody ze zbioru
+    //samochody jednego producenta wyświetlane są w jednej linie
+    private static void showCarsFromSetOneLine(Set<Car> set) {
+        //utworzenie mapy
+        Map<String, String> mapOfManufacturers = new HashMap<>();
+        for (Car car : set) {
+            String manufacturer = car.getManufacturer();
+            String models = mapOfManufacturers.get(manufacturer);
+            if (models == null) {
+                models = car.getModel();
+            } else {
+                models = models + ", " + car.getModel();
+            }
+            mapOfManufacturers.put(manufacturer, models);
+        }
+        //wyświetlenie mapy
+        for (Map.Entry<String, String> entry : mapOfManufacturers.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 
     //metoda wyświetla wszystkie samochody ze zbioru
